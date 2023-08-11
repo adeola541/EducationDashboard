@@ -1,13 +1,191 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body,
+#root,
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  display: flex;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.pieChartBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pieChartBox h1 {
+  font-size: 24px;
+}
+
+.pieChartBox .chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pieChartBox .options {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.pieChartBox .options .option {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.pieChartBox .options .option .title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+ 
+
+}
+
+.pieChartBox .options .option .title .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+}
+
+.barChartBox {
+  width: 100%;
+  height: 100%;
+}
+
+.barChartBox h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* .barChartBox .chart {
+} */
+
+
+
+
+
+.chartBox {
+  display: flex;
+  height: 100%;
+}
+
+.chartBox {
+  flex-direction: column;
+}
+
+.chartBox .boxInfo {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chartBox .boxInfo {
+  gap: 20px;
+}
+
+.chartBox .boxInfo .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chartBox .boxInfo .title {
+  font-size: 14px;
+}
+
+.chartBox h1 {
+  font-size: 20px;
+}
+
+.chartBox .chartInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chartBox .chartInfo .chart {
+  width: 100%;
+  height: 100%;
+}
+
+.chartBox .chartInfo .texts {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.chartBox .chartInfo .texts .percentage {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.chartBox .chartInfo .texts .percentage {
+  font-size: 16px;
+}
+
+.chartBox .chartInfo .texts .duration {
+  font-size: 14px;
+}
+
+
+
+p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.typography {
+	list-style: none;
+	counter-reset: list;
+	padding: 0 1rem;
+}
+
+
+
+
+
+
+@media (min-width: 40em) {
+
 }
